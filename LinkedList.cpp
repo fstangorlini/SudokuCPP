@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   LinkedList.cpp
  * Author: FELIPES
- * 
+ *
  * Created on October 5, 2017, 2:59 PM
  */
 
@@ -41,15 +41,15 @@ void LinkedList<T>::addLast(T val)
     newNode->data = val;
     newNode->next = NULL;
     Node<T>* temp = head;
-    if (temp != NULL) 
+    if (temp != NULL)
     {
-        while (temp->next != NULL) 
+        while (temp->next != NULL)
 	{
             temp = temp->next;
 	}
     temp->next = newNode;
     }
-    else 
+    else
     {
         head = newNode;
     }
@@ -72,7 +72,7 @@ void LinkedList<T>::removeValue(T val)
         previous=current;
         current=current->next;
     }
-    
+
 }
 
 template <typename T>
@@ -102,7 +102,7 @@ int LinkedList<T>::size()
       temp = temp->next;
   }
   return count;
-} 
+}
 
 template <typename T>
 bool LinkedList<T>::isEmpty()
@@ -111,24 +111,24 @@ bool LinkedList<T>::isEmpty()
     else return false;
 }
 
-/*
+
 template <typename T>
-std::string* LinkedList<std::string>::toString()
+std::string* LinkedList<T>::toString()
 {
     std::string str = "";
     Node<T> *temp=new Node<T>;
     temp=head;
-    str = str + "[";
+    str += "[";
     while(temp!=NULL)
     {
-      str = str + (std::string)temp->data;
+      str += temp->data;
       if(temp->next!=NULL) str = str + ",";
       temp=temp->next;
     }
-    str = str +"]" + std::endl;
-    return str;
+    str += "]\n";
+    return &str; //Retorna o ponteiro para a string &
 }
-*/
+/**/
 
 /* TO IMPLEMENT GET METHOD
 template <typename T> struct TypeSelector
@@ -138,8 +138,11 @@ template <typename T> struct TypeSelector
 std::string get(int i)
 {
     std::string str = "";
-    
-    
+
+
     return str;
 }
  */
+/*** Defino os tipos que LinkedList pode assumir ***/
+template class LinkedList<int>;
+template class LinkedList<std::string>;

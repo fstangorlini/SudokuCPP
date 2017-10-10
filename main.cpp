@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   main.cpp
  * Author: FELIPES
  *
@@ -15,14 +15,13 @@
 #include <cstdlib>
 #include <iostream>
 #include "LinkedList.h"
-#include "LinkedList.cpp"
 
 
 
 using namespace std;
 
 /*
- * 
+ *
  */
 int main(int argc, char** argv)
 {
@@ -30,7 +29,7 @@ int main(int argc, char** argv)
     LinkedList<int> intlist;
     intlist.addFirst(1);
     intlist.display();
-    
+
     LinkedList<string> stringlist;
     cout << stringlist.isEmpty() << endl;
     cout << stringlist.size() << endl;
@@ -41,11 +40,11 @@ int main(int argc, char** argv)
     cout << stringlist.size() << endl;
     stringlist.display();
     //cout << stringlist.get(0);
-    
+
     std::string *str;
     //str = stringlist.toString();
     cout << str << endl;
-    
+
     return 0;
 }
 

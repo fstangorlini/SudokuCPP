@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   LinkedList.h
  * Author: FELIPES
  *
@@ -29,7 +29,7 @@ class LinkedList
 {
     Node<T> *head;
     Node<T> *tail;
-    
+
 public:
     LinkedList<T>();
     void addFirst(T val);
@@ -39,12 +39,12 @@ public:
     void display();
     int  size();
     bool isEmpty();
-    //std::string* toString();
+    std::string * toString();
     //std::string* get(int i);
-    
+
 private:
-    
-    
+
+
 };
 
 #endif /* LINKEDLIST_H */
