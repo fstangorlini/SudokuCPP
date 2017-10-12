@@ -13,22 +13,37 @@
 
 #include "Cell.h"
 #include <cstddef>
-#include "LinkedList.h"
-#include "LinkedList.cpp"
+#include <iostream>
 
-//LinkedList<int> cell;
+int cell[9];
 
 Cell::Cell()
 {
-    /*
-    cell.addLast(1);
-    cell.addLast(2);
-    cell.addLast(3);
-    cell.addLast(4);
-    cell.addLast(5);
-    cell.addLast(6);
-    cell.addLast(7);
-    cell.addLast(8);
-    cell.addLast(9);
-     */
+    for(int i=0;i<9;i++)
+    {
+        cell[i] = i+1;
+    }
 }
+
+void Cell::display()
+{
+    std::cout << "[";
+    for(int i=0;i<9;i++)
+    {
+        if(cell[i] != 0) std::cout << cell[i];
+        else std::cout << " ";
+        //if(i+1<9) std::cout << ",";
+    }
+    std::cout << "]";
+}
+
+void Cell::eliminate(int x)
+{
+    if(x>0 && x<=9)
+    {
+        //imagino que o erro esteja aqui...
+        //mas no java o acesso é local
+        cell[x-1] = 0;
+    }
+}
+

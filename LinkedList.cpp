@@ -125,7 +125,7 @@ std::string* LinkedList<T>::toString()
       if(temp->next!=NULL) str = str + ",";
       temp=temp->next;
     }
-    str += "]\n";
+    str += "]";
     return &str; //Retorna o ponteiro para a string &
 }
 /**/

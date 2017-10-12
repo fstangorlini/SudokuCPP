@@ -18,11 +18,16 @@ class Puzzle
 {
 public:
     Puzzle();
-    
+    void display();
+    bool solve();
+    void test();
     
 private:
-    
-    
+    void eliminateSingletons();
+    Cell *getList(int x, int type);
+    void eliminate(int row, int column, int value);
+    void setValue(int row, int column, int value);
+    int *findSingletons();
     
 };
 

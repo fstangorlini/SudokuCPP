@@ -15,6 +15,8 @@
 #include <cstdlib>
 #include <iostream>
 #include "LinkedList.h"
+#include "Cell.h"
+#include "Puzzle.h"
 
 
 
@@ -25,26 +27,20 @@ using namespace std;
  */
 int main(int argc, char** argv)
 {
-    cout << "Start..." << endl;
-    LinkedList<int> intlist;
-    intlist.addFirst(1);
-    intlist.display();
+    cout << "_______________________Start_______________________" << endl;
+    
+    Cell *c1 = new Cell();
+    Cell *c2 = new Cell();
+    c1->display();
+    c2->display();
+    std::cout << "\n";
+    c1->eliminate(1); //Deveria eliminar o 1 só no c1
+    c2->eliminate(2); //Deveria eliminar o 2 só no c2
+    c1->display();
+    c2->display();
+    std::cout << "\n";
 
-    LinkedList<string> stringlist;
-    cout << stringlist.isEmpty() << endl;
-    cout << stringlist.size() << endl;
-    stringlist.addLast("a");
-    stringlist.addLast("x");
-    stringlist.addLast("jasper");
-    stringlist.addLast("goofy");
-    cout << stringlist.size() << endl;
-    stringlist.display();
-    //cout << stringlist.get(0);
-
-    std::string *str;
-    //str = stringlist.toString();
-    cout << str << endl;
-
+    
+    cout << "________________________End________________________" << endl;
     return 0;
 }
-

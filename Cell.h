@@ -17,6 +17,8 @@
 class Cell {
 public:
     Cell();
+    void display();
+    void eliminate(int x);
     
 private:
     

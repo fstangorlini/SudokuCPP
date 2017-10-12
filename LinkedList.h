@@ -48,4 +48,3 @@ private:
 };
 
 #endif /* LINKEDLIST_H */
-
